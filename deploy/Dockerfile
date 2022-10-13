@@ -19,11 +19,13 @@ RUN npm install
 
 ADD source.js /data/source.js
 ADD json-server.social.middlewares.js /data/json-server.social.middlewares.js
+ADD json-server.modify.middlewares.js /data/json-server.modify.middlewares.js
 ADD json-server.routes.json /data/json-server.routes.json
 
 CMD [ \
     "json-server", "source.js", \
     "-m", "json-server.social.middlewares.js", \
+    "-m", "json-server.modify.middlewares.js", \
     "-r", "json-server.routes.json", \
     "--host=0.0.0.0" \
 ]

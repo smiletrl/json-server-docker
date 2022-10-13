@@ -4,7 +4,7 @@
   "private": true,
   "description": "Mock server built by json server",
   "scripts": {
-    "build": "json-server --watch source.js"
+    "dev": "json-server --watch source.js -m json-server.social.middlewares.js json-server.modify.middlewares.js  -r json-server.routes.json"
   },
   "dependencies": {
     "@faker-js/faker": "^7.5.0",
